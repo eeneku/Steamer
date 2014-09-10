@@ -1,4 +1,8 @@
 #include<stdio.h>
+#include<libxml/xmlmemory.h>
+#include<libxml/parser.h>
+
+int aliohjelma(int luku);
 
 int main()
 {

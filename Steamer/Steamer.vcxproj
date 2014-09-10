@@ -38,7 +38,10 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>E:\Users\eeneku\Desktop\libxml2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\Users\eeneku\Desktop\libxml2\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -48,6 +51,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>libexslt.lib;libexslt_a.lib;libxml2.lib;libxml2_a.lib;iconv.lib;iconv_a.lib;libxmlsec.lib;libxmlsec_a.lib;libxmlsec-mscrypto.lib;libxmlsec-mscrypto_a.lib;libxmlsec-openssl.lib;libxmlsec-openssl_a.lib;libxslt.lib;libxslt_a.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
